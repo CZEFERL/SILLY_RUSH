@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
+    public int health = 30;
 
     private Transform target;
     private int wavepointIndex = 0;
@@ -27,6 +28,8 @@ public class Enemy : MonoBehaviour
             GetNextWaypoint();
             return;
         }
+
+        CheckIsAlive();
     }
 
     void GetNextWaypoint()
@@ -42,4 +45,16 @@ public class Enemy : MonoBehaviour
             target = Waypoints.points[wavepointIndex];
         }
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
+
+    private void CheckIsAlive()
+    {
+        if (health <= 0)
+            Destroy(gameObject);
+    }
+
 }

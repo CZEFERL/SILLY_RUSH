@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
+
 public class PauseMenu : MonoBehaviour
 {
     
@@ -33,7 +34,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-
+       
         //
         //AudioListener.pause = false;
     }
@@ -44,7 +45,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
 
-        //Музыка
+        //пїЅпїЅпїЅпїЅпїЅпїЅ
         //AudioListener.pause = true;
 
     }
@@ -53,7 +54,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
-       SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 
 
