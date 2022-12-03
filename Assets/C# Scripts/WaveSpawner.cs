@@ -10,22 +10,19 @@ public class WaveSpawner : MonoBehaviour
 
     public Transform spawnpoint;
 
-    public float timeBetweenWaves = 5f;
-    private float countdown = 2f;
+    public float timeBetweenWaves = 7f;
+    private float countdown = 1.5f;
+    private float addedTimeBetweenWaves = 0f;
 
     private int waveIndex = 0;
 
     void Update ()
     {
-        if (EnemiesAlive > 0)
-        {
-            return;
-        }
-
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
+            countdown = timeBetweenWaves + addedTimeBetweenWaves;
+            addedTimeBetweenWaves += 3f;
             return;
         }
 
