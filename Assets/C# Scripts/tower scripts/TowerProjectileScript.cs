@@ -10,7 +10,8 @@ public class TowerProjectileScript : MonoBehaviour
 
     void Update()
     {
-        Move();
+       
+            Move();
     }
 
     public void SetTarget(Transform enemy)
@@ -24,6 +25,10 @@ public class TowerProjectileScript : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, target.position) < .1f)
             {
+                Vector3 dir = target.position - transform.position;
+                Quaternion lookRatation = Quaternion.LookRotation(dir);
+                Vector3 rotation = lookRatation.eulerAngles;
+                transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
                 target.GetComponent<Enemy>().TakeDamage(damage);
                 Destroy(gameObject);
             }    
