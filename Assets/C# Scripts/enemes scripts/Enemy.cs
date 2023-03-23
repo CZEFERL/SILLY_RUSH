@@ -56,6 +56,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            WaveSpawner.EnemiesAlive--;
         }
     }
 

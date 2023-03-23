@@ -18,6 +18,19 @@ public class WaveSpawner : MonoBehaviour
 
     void Update ()
     {
+        if (EnemiesAlive > 0)
+        {
+            return;
+        }
+
+
+        if (waveIndex >= waves.Length)
+        {
+            print("Конец игры.");
+            enabled = false;
+            return;
+        }
+
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -33,18 +46,23 @@ public class WaveSpawner : MonoBehaviour
     {
         Wave wave = waves[waveIndex];
 
-        for (int i = 0;  i < wave.count; i++)
+        for (int i = 0;  i < wave.SubWaves.Length; i++)
         {
-            SpawnEnemy(wave.enemy);
-            yield return new WaitForSeconds(1f / wave.rate);
+            EnemiesAlive = wave.EnemyCount();
+            for (int j = 1; j < wave.SubWaves[i].count; j++)
+            {
+                SpawnEnemy(wave.SubWaves[i].enemy);
+                yield return new WaitForSeconds(1f / wave.SubWaves[i].rate);
+            }
+            SpawnEnemy(wave.SubWaves[i].enemy);
+            if (i != wave.SubWaves.Length - 1)
+                yield return new WaitForSeconds(1f / wave.rate);
         }
-
         waveIndex++;
     }
 
     void SpawnEnemy (GameObject enemy)
     {
         Instantiate(enemy, spawnpoint.position, spawnpoint.rotation);
-        EnemiesAlive++;
     }
 }

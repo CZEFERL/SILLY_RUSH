@@ -2528,17 +2528,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 279119661796408142, guid: 4a04536ff30e25c4fb01316398451b08, type: 3}
-    count: 10
+  - SubWaves:
+    - enemy: {fileID: 279119661796408142, guid: 4a04536ff30e25c4fb01316398451b08, type: 3}
+      count: 2
+      rate: 3
+    - enemy: {fileID: 4576254856459248776, guid: a212e9d079181f9438c63f31630170c1, type: 3}
+      count: 3
+      rate: 2
     rate: 3
-  - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
-    count: 3
-    rate: 2
-  - enemy: {fileID: 4576254856459248776, guid: a212e9d079181f9438c63f31630170c1, type: 3}
-    count: 4
+  - SubWaves:
+    - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
+      count: 1
+      rate: 1
     rate: 2
   spawnpoint: {fileID: 1705285433}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 3
 --- !u!114 &781342851
 MonoBehaviour:
   m_ObjectHideFlags: 0
