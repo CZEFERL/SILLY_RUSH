@@ -4,14 +4,14 @@ using UnityEngine;
 public class Wave
 {
     public SubWave[] SubWaves;
-    public float rate;
+    public float time;
 
     public int EnemyCount()
     {
         int cnt = 0;
         for (var i = 0; i < SubWaves.Length; i++)
         {
-            cnt += SubWaves[0].count;
+            cnt += (SubWaves[i].SpawnInd == WaveSpawner.SpawnsCount) ? SubWaves[i].count * 2 : SubWaves[i].count;
         }
         return cnt;
     }
@@ -21,6 +21,7 @@ public class Wave
 public class SubWave
 {
     public GameObject enemy;
+    public int SpawnInd;
     public int count;
-    public float rate;
+    public float time;
 }

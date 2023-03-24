@@ -8,13 +8,20 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
 
-    public Transform spawnpoint;
+    public Transform[] SpawnPoints;
+    public static int SpawnsCount;
 
     public float timeBetweenWaves = 7f;
     private float countdown = 1.5f;
     private float addedTimeBetweenWaves = 0f;
 
     private int waveIndex = 0;
+
+
+    private void Start()
+    {
+        SpawnsCount = SpawnPoints.Length;
+    }
 
     void Update ()
     {
@@ -23,7 +30,7 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-
+        //Заглушка для конца игры
         if (waveIndex >= waves.Length)
         {
             print("Конец игры.");
@@ -51,18 +58,25 @@ public class WaveSpawner : MonoBehaviour
             EnemiesAlive = wave.EnemyCount();
             for (int j = 1; j < wave.SubWaves[i].count; j++)
             {
-                SpawnEnemy(wave.SubWaves[i].enemy);
-                yield return new WaitForSeconds(1f / wave.SubWaves[i].rate);
+                SpawnEnemy(wave.SubWaves[i].enemy, wave.SubWaves[i].SpawnInd);
+                yield return new WaitForSeconds(wave.SubWaves[i].time);
             }
-            SpawnEnemy(wave.SubWaves[i].enemy);
+            SpawnEnemy(wave.SubWaves[i].enemy, wave.SubWaves[i].SpawnInd);
             if (i != wave.SubWaves.Length - 1)
-                yield return new WaitForSeconds(1f / wave.rate);
+                yield return new WaitForSeconds(wave.time);
         }
         waveIndex++;
     }
 
-    void SpawnEnemy (GameObject enemy)
+    void SpawnEnemy (GameObject enemy, int SpawnNum)
     {
-        Instantiate(enemy, spawnpoint.position, spawnpoint.rotation);
+        if (SpawnNum == SpawnsCount)
+        {
+            //Spawns enemies on both side lines
+            Instantiate(enemy, SpawnPoints[1].position, SpawnPoints[1].rotation);
+            Instantiate(enemy, SpawnPoints[^1].position, SpawnPoints[^1].rotation);
+        }
+        else
+            Instantiate(enemy, SpawnPoints[SpawnNum].position, SpawnPoints[SpawnNum].rotation);
     }
 }
