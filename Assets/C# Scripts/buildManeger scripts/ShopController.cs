@@ -45,6 +45,6 @@ public class ShopController : MonoBehaviour
                 AllCell.transform.GetChild(i).GetComponent<BuildManager>().setBuild(dot);
             }
         }
-
+        shopPanel.SetActive(false);
     }
 }
