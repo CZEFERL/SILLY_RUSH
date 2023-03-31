@@ -10,7 +10,7 @@ public class BuildManager : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (shopPanel.active)
+        if (shopPanel.activeInHierarchy)
             return;
 
         shopPanel.SetActive(true);

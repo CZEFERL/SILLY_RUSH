@@ -5,10 +5,16 @@ using UnityEngine;
 
 public class TowerScripts : MonoBehaviour
 {
+    public int money;
     private float range = 2;
     public float currentCD, CD;
 
     public GameObject Projectile;
+
+    private void Start()
+    {
+        PlayerStats.Money -= money;
+    }
 
     private void Update()
     {
