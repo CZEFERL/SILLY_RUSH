@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 10f;
     public int health = 30;
+    public int money = 40;
 
     private Transform target;
     private int wavepointIndex = 1;
@@ -93,6 +94,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             WaveSpawner.EnemiesAlive--;
+            PlayerStats.Money += money;
         }
     }
 
