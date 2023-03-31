@@ -21,9 +21,6 @@ public class GameManagerScripts : MonoBehaviour
     {
         playerHealth += count;
         healthText.text = playerHealth.ToString();
-        if (playerHealth <= 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+
     }
 }
