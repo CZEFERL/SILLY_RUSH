@@ -8,11 +8,6 @@ public class WinMenu : MonoBehaviour
 
     public GameObject WinPanel;
 
-    void Update()
-    {
-        
-    }
-
 
     public void Win()
     {

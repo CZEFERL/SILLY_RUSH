@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b577f83fcb62d41f7b6775556942857a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 300
+  money: 250
   currentCD: 0
   CD: 1
   Projectile: {fileID: 6441853576523837475, guid: 24fbb113a2fef49a093eb0da961656e4, type: 3}

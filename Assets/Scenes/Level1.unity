@@ -3647,7 +3647,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 76f902bc2b847f1479beb6a8f11ad1d3, type: 3}
     - target: {fileID: 435741712053376468, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_text
-      value: 300
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 435741712419922919, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_text
@@ -3770,6 +3770,7 @@ MonoBehaviour:
   - {fileID: 1117029042}
   - {fileID: 1090521708}
   timeBetweenWaves: 3
+  WM: {fileID: 477628402}
 --- !u!114 &781342851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3782,7 +3783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414e6000249eeac45895ae4c2744acc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 400
+  startMoney: 450
   startLives: 20
 --- !u!1 &799082967
 GameObject:

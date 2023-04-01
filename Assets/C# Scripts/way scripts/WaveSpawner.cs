@@ -17,6 +17,8 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveIndex = 0;
 
+    public WinMenu WM;
+
 
     private void Start()
     {
@@ -30,10 +32,10 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        //Заглушка для конца игры
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         if (waveIndex >= waves.Length)
         {
-            print("Конец игры.");
+            WM.Win();
             enabled = false;
             return;
         }
