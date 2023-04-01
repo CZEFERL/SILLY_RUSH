@@ -5,13 +5,12 @@ using UnityEngine;
 public class TowerProjectileScript : MonoBehaviour
 {
     Transform target;
-    float speed = 7;
-    int damage = 10;
+    public float speed = 21;
+    public int damage = 10;
 
     void Update()
     {
-       
-            Move();
+        Move();
     }
 
     public void SetTarget(Transform enemy)
@@ -25,18 +24,16 @@ public class TowerProjectileScript : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, target.position) < .1f)
             {
-                Vector3 dir = target.position - transform.position;
-                Quaternion lookRatation = Quaternion.LookRotation(dir);
-                Vector3 rotation = lookRatation.eulerAngles;
-                transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
                 target.GetComponent<Enemy>().TakeDamage(damage);
                 Destroy(gameObject);
             }    
             else
             {
                 Vector2 dir = target.position - transform.position;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-                transform.Translate(dir.normalized * Time.deltaTime * speed);
+                transform.Translate(dir.normalized * Time.deltaTime * speed, Space.World);
             }
         }
         else

@@ -10,12 +10,10 @@ public class Enemy : MonoBehaviour
 
     private Transform target;
     private int wavepointIndex = 1;
-    private Vector3 CorrVec;
-    private Vector3 dir;
-    private float angle;
 
     private bool xdir = Waypoints.XDirStart;
     private bool ydir = Waypoints.YDirStart;
+    private Vector3 CorrVec;
 
     void Start ()
     {
@@ -30,8 +28,8 @@ public class Enemy : MonoBehaviour
 
     void Update ()
     {
-        dir = target.position - transform.position + CorrVec;
-        angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        Vector3 dir = target.position - transform.position + CorrVec;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.Translate(speed * Time.deltaTime * dir.normalized, Space.World);
         
