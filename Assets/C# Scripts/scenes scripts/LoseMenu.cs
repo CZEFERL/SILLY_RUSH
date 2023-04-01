@@ -8,20 +8,11 @@ public class LoseMenu : MonoBehaviour
 
     public GameObject LosePanel;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (PlayerStats.Lives <= 0)
-            Lose();
-    }
-
-
     public void Lose()
     {
         LosePanel.SetActive(true);
         Time.timeScale = 0f;
     }
-
 
     public void Restart()
     {

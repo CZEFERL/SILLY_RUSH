@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public static int EnemiesAlive = 0;
+    public static int EnemiesAlive;
 
     public Wave[] waves;
 
@@ -12,21 +12,33 @@ public class WaveSpawner : MonoBehaviour
     public static int SpawnsCount;
 
     public float timeBetweenWaves = 7f;
-    private float countdown = 1.5f;
-    private float addedTimeBetweenWaves = 0f;
+    private float countdown;
+    private float addedTimeBetweenWaves;
 
-    private int waveIndex = 0;
+    private static int StartIndex = 0;
+    private int waveIndex;
 
     public WinMenu WM;
+    public LoseMenu LM;
 
 
     private void Start()
     {
+        EnemiesAlive = 0;
         SpawnsCount = SpawnPoints.Length;
+        waveIndex = StartIndex;
+        addedTimeBetweenWaves = 0f;
+        countdown = 1.5f;
     }
 
     void Update ()
     {
+        if (PlayerStats.Lives <= 0)
+        {
+            LM.Lose();
+            return;
+        }
+
         if (EnemiesAlive > 0)
         {
             return;
