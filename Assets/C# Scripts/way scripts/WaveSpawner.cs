@@ -32,11 +32,9 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        //�������� ��� ����� ����
         if (waveIndex >= waves.Length)
         {
             WM.Win();
-            enabled = false;
             return;
         }
 
@@ -55,9 +53,9 @@ public class WaveSpawner : MonoBehaviour
     {
         Wave wave = waves[waveIndex];
 
+        EnemiesAlive = wave.EnemyCount();
         for (int i = 0;  i < wave.SubWaves.Length; i++)
         {
-            EnemiesAlive = wave.EnemyCount();
             for (int j = 1; j < wave.SubWaves[i].count; j++)
             {
                 SpawnEnemy(wave.SubWaves[i].enemy, wave.SubWaves[i].SpawnInd);

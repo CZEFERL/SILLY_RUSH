@@ -50,7 +50,6 @@ public class Enemy : MonoBehaviour
         if (wavepointIndex >= Waypoints.points.Length - 1)
         {
             endpath();
-            WaveSpawner.EnemiesAlive--;
         }
         else
         {
@@ -102,6 +101,7 @@ public class Enemy : MonoBehaviour
     {
         System.Console.WriteLine(PlayerStats.Lives);
         PlayerStats.Lives--;
+        WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }
 
