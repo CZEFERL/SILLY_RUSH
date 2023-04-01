@@ -30,9 +30,6 @@ public class TowerProjectileScript : MonoBehaviour
             else
             {
                 Vector2 dir = target.position - transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
-
                 transform.Translate(dir.normalized * Time.deltaTime * speed, Space.World);
             }
         }

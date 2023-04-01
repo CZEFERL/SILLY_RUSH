@@ -7,7 +7,8 @@ public class TowerScripts : MonoBehaviour
 {
     public int money;
     private float range = 2;
-    public float currentCD, CD;
+    public float CD;
+    private float currentCD;
 
     public GameObject Projectile;
 
@@ -54,9 +55,11 @@ public class TowerScripts : MonoBehaviour
     void Shoot(Transform enemy)
     {
         currentCD = CD;
+        
+        Vector3 dir = enemy.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        GameObject proj = Instantiate(Projectile);
-        proj.transform.position = transform.position;
+        GameObject proj = Instantiate(Projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
         proj.GetComponent<TowerProjectileScript>().SetTarget(enemy);
     }
 
