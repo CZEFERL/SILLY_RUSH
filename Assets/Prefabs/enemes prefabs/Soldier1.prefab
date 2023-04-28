@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7978205545885046812}
   - component: {fileID: 2313680040622211162}
   - component: {fileID: 3644121478253801277}
+  - component: {fileID: -5572921287083603112}
   m_Layer: 0
   m_Name: Soldier1
   m_TagString: Enemy
@@ -100,3 +101,23 @@ MonoBehaviour:
   speed: 3
   health: 20
   money: 40
+--- !u!95 &-5572921287083603112
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279119661796408142}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f63cb5c879bce1a46b2b27d804528d69, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
