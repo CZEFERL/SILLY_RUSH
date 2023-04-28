@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.Translate(speed * Time.deltaTime * dir.normalized, Space.World);
         
-        if (Vector3.Distance(transform.position, target.position + CorrVec) <= 0.01f)
+        if (Vector3.Distance(transform.position, target.position + CorrVec) <= 0.03f)
         {
             transform.position = target.position + CorrVec;
             GetNextWaypoint();

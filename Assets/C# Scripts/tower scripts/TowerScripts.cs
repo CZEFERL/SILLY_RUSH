@@ -86,11 +86,14 @@ public class TowerScripts : MonoBehaviour
                 break;
             case < -135:
                 transform.eulerAngles = new Vector3(0, 0, 180);
-                x += 180;
+                x += 225;
                 break;
             case < -45:
                 transform.eulerAngles = new Vector3(0, 0, 90);
-                x += 90;
+                x += 135;
+                break;
+            default:
+                transform.eulerAngles = new Vector3(0, 0, 0);
                 break;
         }
         switch (x)
