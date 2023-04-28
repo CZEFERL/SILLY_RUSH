@@ -5,15 +5,20 @@ using UnityEngine;
 
 public class TowerScripts : MonoBehaviour
 {
+    public bool isRotatable;
     public int money;
     private float range = 2;
     public float CD;
     private float currentCD;
+    private SpriteRenderer spriteRenderer;
+    public Sprite[] spriteArray = null;
 
+    private int index = 2;
     public GameObject Projectile;
 
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         PlayerStats.Money -= money;
     }
 
@@ -59,9 +64,69 @@ public class TowerScripts : MonoBehaviour
         Vector3 dir = enemy.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
+        if (isRotatable)
+            Rotate(dir);
+
         GameObject proj = Instantiate(Projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
         proj.GetComponent<TowerProjectileScript>().SetTarget(enemy);
     }
 
+    void Rotate(Vector3 dir)
+    {
+        var x = SignedAngleToTarget(dir);
+        switch (x)
+        {
+            case > 135:
+                transform.eulerAngles = new Vector3(0, 0, -180);
+                x -= 135;
+                break;
+            case > 45:
+                transform.eulerAngles = new Vector3(0, 0, -90);
+                x -= 45;
+                break;
+            case < -135:
+                transform.eulerAngles = new Vector3(0, 0, 180);
+                x += 180;
+                break;
+            case < -45:
+                transform.eulerAngles = new Vector3(0, 0, 90);
+                x += 90;
+                break;
+        }
+        switch (x)
+        {
+            case < 11.25f:
+                index = 5;
+                break;
+            case < 33.75f:
+                index = 6;
+                break;
+            case < 56.25f:
+                index = 7;
+                break;
+            case < 78.75f:
+                index = 8;
+                break;
+            default:
+                index = 9;
+                break;
+        }
+        StartCoroutine(FireAnimation());
+    }
 
+    IEnumerator FireAnimation ()
+    {
+        spriteRenderer.sprite = spriteArray[index];
+        index -= 5;
+        yield return new WaitForSeconds(0.3f);
+        spriteRenderer.sprite = spriteArray[index];
+    }
+
+    float SignedAngleToTarget(Vector3 dir)
+    {
+        float angle = Vector3.Angle(dir, new Vector3(1, 0, 0));
+        float sign = Mathf.Sign(Vector3.Dot(new Vector3(0, 0, 1), Vector3.Cross(dir, new Vector3(1, 0, 0))));
+
+        return angle * sign;
+    }
 }

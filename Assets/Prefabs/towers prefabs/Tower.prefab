@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6278910382359757889}
   - component: {fileID: 8293636038832732977}
-  - component: {fileID: 7615624953144131888}
+  - component: {fileID: -103919785339854524}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 76f902bc2b847f1479beb6a8f11ad1d3, type: 3}
+  m_Sprite: {fileID: 233274068, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7615624953144131888
+--- !u!114 &-103919785339854524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +97,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b577f83fcb62d41f7b6775556942857a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRotatable: 1
   money: 250
-  currentCD: 0
   CD: 1
+  spriteRenderer: {fileID: 8293636038832732977}
+  spriteArray:
+  - {fileID: 233274068, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: 1011208634, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: 337400990, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: 1042023033, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: -111924936, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: 489608384, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: -701365332, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: -163849628, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: 1527092212, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
+  - {fileID: -607732313, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
   Projectile: {fileID: 6441853576523837475, guid: 24fbb113a2fef49a093eb0da961656e4, type: 3}
