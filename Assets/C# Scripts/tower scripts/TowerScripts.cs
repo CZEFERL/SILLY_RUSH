@@ -7,9 +7,14 @@ public class TowerScripts : MonoBehaviour
 {
     public bool isRotatable;
     public int money;
-    private float range = 2;
+
+    public float splashRange = 0;
+    public float projSpeed;
+    public int damage;
+    public float range;
     public float CD;
     private float currentCD;
+    
     private SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray = null;
 
@@ -68,7 +73,10 @@ public class TowerScripts : MonoBehaviour
             Rotate(dir);
 
         GameObject proj = Instantiate(Projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
-        proj.GetComponent<TowerProjectileScript>().SetTarget(enemy);
+        if (splashRange == 0)
+            proj.GetComponent<TowerProjectileScript>().SetTarget(enemy, damage, projSpeed);
+        else
+            proj.GetComponent<SplashProjectileScript>().SetTarget(enemy.position, damage, projSpeed, splashRange);
     }
 
     void Rotate(Vector3 dir)

@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class TowerProjectileScript : MonoBehaviour
 {
-    Transform target;
-    public float speed;
-    public int damage;
-
+    private Transform target;
+    private float speed;
+    private int damage;
+    
     void Update()
     {
         Move();
     }
 
-    public void SetTarget(Transform enemy)
+    public void SetTarget(Transform enemy, int damage, float speed)
     {
         target = enemy;
+        this.damage = damage;
+        this.speed = speed;
     }
 
     private void Move()
@@ -26,7 +28,7 @@ public class TowerProjectileScript : MonoBehaviour
             {
                 target.GetComponent<Enemy>().TakeDamage(damage);
                 Destroy(gameObject);
-            }    
+            }
             else
             {
                 Vector2 dir = target.position - transform.position;
@@ -36,5 +38,4 @@ public class TowerProjectileScript : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
 }

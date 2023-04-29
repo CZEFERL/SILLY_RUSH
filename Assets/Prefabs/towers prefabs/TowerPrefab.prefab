@@ -99,5 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRotatable: 0
   money: 200
+  splashRange: 0
+  projSpeed: 30
+  damage: 10
+  range: 2
   CD: 1
+  spriteArray: []
   Projectile: {fileID: 6441853576523837475, guid: 24fbb113a2fef49a093eb0da961656e4, type: 3}

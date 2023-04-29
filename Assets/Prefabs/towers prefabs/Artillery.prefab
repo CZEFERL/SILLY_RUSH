@@ -99,7 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRotatable: 1
   money: 250
-  CD: 2
+  splashRange: 1
+  projSpeed: 10
+  damage: 40
+  range: 2
+  CD: 3
   spriteArray:
   - {fileID: 172861023, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
   - {fileID: -928906460, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
@@ -111,4 +115,4 @@ MonoBehaviour:
   - {fileID: 619253833, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
   - {fileID: 2139858108, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
   - {fileID: -738628001, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
-  Projectile: {fileID: 6441853576523837475, guid: 24fbb113a2fef49a093eb0da961656e4, type: 3}
+  Projectile: {fileID: 6441853576523837475, guid: ba39e95ece3d7ea49923adb9790b15f5, type: 3}
