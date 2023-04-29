@@ -5,8 +5,8 @@ using UnityEngine;
 public class TowerProjectileScript : MonoBehaviour
 {
     Transform target;
-    public float speed = 21;
-    public int damage = 10;
+    public float speed;
+    public int damage;
 
     void Update()
     {

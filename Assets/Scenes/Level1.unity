@@ -3672,6 +3672,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 435741711758855089, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
+      propertyPath: m_text
+      value: "\u0413\u0430\u0443\u0431\u0438\u0446\u0430"
+      objectReference: {fileID: 0}
     - target: {fileID: 435741712039684520, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_SizeDelta.x
       value: 32
@@ -3708,9 +3712,17 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0414\u041E\u0422"
       objectReference: {fileID: 0}
+    - target: {fileID: 435741712430365102, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 172861023, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
     - target: {fileID: 435741712657043198, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_text
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 435741712675711645, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
+      propertyPath: m_text
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 435741712908927735, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_text

@@ -39,8 +39,6 @@ public class Enemy : MonoBehaviour
             GetNextWaypoint();
             return;
         }
-
-        CheckIsAlive();
     }
 
     void GetNextWaypoint()
@@ -83,6 +81,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        CheckIsAlive();
     }
 
     private void CheckIsAlive()
