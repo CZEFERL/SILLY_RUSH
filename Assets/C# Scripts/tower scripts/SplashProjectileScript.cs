@@ -46,6 +46,6 @@ public class SplashProjectileScript : MonoBehaviour
 
     private int CalculateSplashDamage(float dist)
     {
-        return Mathf.RoundToInt(-damage * (dist * dist) / (splashRange * splashRange) + damage);
+        return Mathf.RoundToInt(-damage / 2 * (dist * dist) / (splashRange * splashRange) + damage);
     }
 }

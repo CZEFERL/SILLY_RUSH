@@ -24,7 +24,7 @@ public class TowerProjectileScript : MonoBehaviour
     {
         if (target != null)
         {
-            if (Vector2.Distance(transform.position, target.position) < .1f)
+            if (Vector2.Distance(transform.position, target.position) < 0.1f)
             {
                 target.GetComponent<Enemy>().TakeDamage(damage);
                 Destroy(gameObject);

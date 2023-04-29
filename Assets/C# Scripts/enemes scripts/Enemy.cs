@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public HealthBarBehavior HealthBar;
     public float speed = 10f;
-    public int health = 30;
+    public int maxHealth = 30;
+    private int health;
     public int money = 40;
 
     private Transform target;
@@ -15,7 +17,7 @@ public class Enemy : MonoBehaviour
     private bool ydir = Waypoints.YDirStart;
     private Vector3 CorrVec;
 
-    void Start ()
+    void Start()
     {
         CorrVec = transform.position - Waypoints.points[0].position;
         target = Waypoints.points[wavepointIndex];
@@ -24,9 +26,12 @@ public class Enemy : MonoBehaviour
             transform.position = new Vector3(transform.position.x, Waypoints.points[0].position.y);
         if (Waypoints.points[1].position.y - Waypoints.points[0].position.y == 0)
             transform.position = new Vector3(Waypoints.points[0].position.x, transform.position.y);
+
+        health = maxHealth;
+        HealthBar.SetHealth(health, maxHealth);
     }
 
-    void Update ()
+    void Update()
     {
         Vector3 dir = target.position - transform.position + CorrVec;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -81,6 +86,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        HealthBar.SetHealth(health, maxHealth);
         CheckIsAlive();
     }
 
