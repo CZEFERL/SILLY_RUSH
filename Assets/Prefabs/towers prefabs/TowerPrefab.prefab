@@ -103,6 +103,6 @@ MonoBehaviour:
   projSpeed: 30
   damage: 10
   range: 2
-  CD: 1
+  CD: 0.65
   spriteArray: []
   Projectile: {fileID: 6441853576523837475, guid: 24fbb113a2fef49a093eb0da961656e4, type: 3}

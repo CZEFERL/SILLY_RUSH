@@ -101,7 +101,7 @@ MonoBehaviour:
   money: 250
   splashRange: 1
   projSpeed: 10
-  damage: 40
+  damage: 25
   range: 2
   CD: 3
   spriteArray:

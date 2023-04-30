@@ -103,7 +103,7 @@ MonoBehaviour:
   projSpeed: 25
   damage: 15
   range: 4
-  CD: 1.7
+  CD: 1.8
   spriteArray:
   - {fileID: 233274068, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
   - {fileID: 1011208634, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
