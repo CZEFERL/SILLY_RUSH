@@ -20,11 +20,19 @@ public class TowerScripts : MonoBehaviour
 
     private int index = 2;
     public GameObject Projectile;
+    private GameObject FunctionPanel;
+    private GameObject shopPanel;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         PlayerStats.Money -= money;
+    }
+
+    private void Awake()
+    {
+        FunctionPanel = GameObject.Find("Canvas").transform.Find("FunctionPanel").gameObject;
+        shopPanel = GameObject.Find("Canvas").transform.Find("Shop").gameObject;
     }
 
     private void Update()
@@ -139,5 +147,18 @@ public class TowerScripts : MonoBehaviour
         float sign = Mathf.Sign(Vector3.Dot(new Vector3(0, 0, 1), Vector3.Cross(dir, new Vector3(1, 0, 0))));
 
         return angle * sign;
+    }
+
+    void OnMouseDown()
+    {
+        if (FunctionPanel.activeInHierarchy)
+            return;
+
+        if (shopPanel.activeInHierarchy)
+            return;
+
+
+        FunctionPanel.SetActive(true);
+        FunctionController.pole = gameObject;
     }
 }
