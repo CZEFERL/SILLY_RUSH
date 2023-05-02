@@ -8,6 +8,6 @@ public class LivesUI : MonoBehaviour
 
 	void Update()
 	{
-		livesText.text = "LIVES: " + PlayerStats.Lives.ToString();
+		livesText.text = "∆»«Õ»: " + PlayerStats.Lives.ToString();
 	}
 }

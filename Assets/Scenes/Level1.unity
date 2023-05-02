@@ -1351,7 +1351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -466.2926, y: 158.13727}
+  m_AnchoredPosition: {x: -466.29257, y: 158.13727}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &414177020 stripped
@@ -2671,6 +2671,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0413\u0430\u0443\u0431\u0438\u0446\u0430"
       objectReference: {fileID: 0}
+    - target: {fileID: 435741711758855095, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 435741712039684520, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_SizeDelta.x
       value: 32
@@ -2713,7 +2717,7 @@ PrefabInstance:
       objectReference: {fileID: 172861023, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
     - target: {fileID: 435741712657043198, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_text
-      value: Tower
+      value: "\u0422\u0443\u0440\u0435\u043B\u044C"
       objectReference: {fileID: 0}
     - target: {fileID: 435741712675711645, guid: d534ed1d48ddf2c458b2424b7738acaf, type: 3}
       propertyPath: m_text
@@ -8074,7 +8078,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'LIVES: '
+  m_Text: "\u0416\u0418\u0417\u041D\u0418: "
 --- !u!222 &1418909974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8450,7 +8454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: START
+  m_text: "\u0421\u0422\u0410\u0420\u0422"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8713,7 +8717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'MONEY: '
+  m_Text: "\u0414\u0415\u041D\u042C\u0413\u0418:"
 --- !u!222 &1663994529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13517,7 +13521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -517.50024, y: 48}
+  m_AnchoredPosition: {x: -517.5005, y: 48}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1592720962813833311
