@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 2798881016294841965}
   - component: {fileID: 4072742037303230525}
   - component: {fileID: 3047331918834209547}
+  - component: {fileID: 6706030609270101633}
   m_Layer: 0
   m_Name: Plane1
   m_TagString: Enemy
@@ -265,9 +266,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 7850948201901172502}
-  speed: 5
+  speed: 3
   maxHealth: 30
-  money: 0
+  health: 0
+  money: 75
+--- !u!114 &6706030609270101633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4320336697399757452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef35459c826f1e41b012fb1be4a801d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagedPlane: {fileID: 21300000, guid: e0c38d172c02c7441a43fd04e6c9ab95, type: 3}
 --- !u!1 &6211840695820860399
 GameObject:
   m_ObjectHideFlags: 0

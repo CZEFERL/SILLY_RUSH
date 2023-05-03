@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public HealthBarBehavior HealthBar;
     public float speed = 10f;
     public int maxHealth = 30;
-    private int health;
+    public int health;
     public int money = 40;
 
     private Transform target;
