@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9149371478109733848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.93728244, y: 0.79548645, z: 0.561859}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,7 +117,6 @@ MonoBehaviour:
   - {fileID: 1527092212, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
   - {fileID: -607732313, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
   Projectile: {fileID: 6441853576523837475, guid: 24fbb113a2fef49a093eb0da961656e4, type: 3}
-  FunctionPanel: {fileID: 0}
 --- !u!61 &-226091186541582037
 BoxCollider2D:
   m_ObjectHideFlags: 0

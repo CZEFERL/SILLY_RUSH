@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 9149371478109733848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.93728244, y: 0.79548645, z: 0.561859}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,7 +117,6 @@ MonoBehaviour:
   - {fileID: 2139858108, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
   - {fileID: -738628001, guid: b0a04efd3c4bb214baec7a351f82b323, type: 3}
   Projectile: {fileID: 6441853576523837475, guid: ba39e95ece3d7ea49923adb9790b15f5, type: 3}
-  FunctionPanel: {fileID: 0}
 --- !u!61 &-4117380260181904995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -135,7 +134,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 0.25, y: 0.25}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
