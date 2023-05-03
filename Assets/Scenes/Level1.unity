@@ -1508,7 +1508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -466.29254, y: 158.13727}
+  m_AnchoredPosition: {x: -67.99994, y: 158.13727}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &414177020 stripped
@@ -3040,12 +3040,43 @@ MonoBehaviour:
       SpawnInd: 3
       count: 8
       time: 0.8
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      SpawnInd: 1
+      count: 1
+      time: 0.8
+    time: 1.5
+  - SubWaves:
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      SpawnInd: 1
+      count: 1
+      time: 1
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      SpawnInd: 2
+      count: 1
+      time: 1
+    - enemy: {fileID: 4576254856459248776, guid: a212e9d079181f9438c63f31630170c1, type: 3}
+      SpawnInd: 3
+      count: 3
+      time: 0.6
+    - enemy: {fileID: 1777544729743001094, guid: aa64d49d85289cb439d922e01de4e12f, type: 3}
+      SpawnInd: 0
+      count: 1
+      time: 0.6
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      SpawnInd: 2
+      count: 1
+      time: 0.6
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      SpawnInd: 1
+      count: 1
+      time: 0.6
     time: 2
   SpawnPoints:
   - {fileID: 1406333405}
   - {fileID: 1117029042}
   - {fileID: 1090521708}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 1
+  timeIncrease: 1.5
   WM: {fileID: 477628402}
   LM: {fileID: 1938876021}
 --- !u!114 &781342851

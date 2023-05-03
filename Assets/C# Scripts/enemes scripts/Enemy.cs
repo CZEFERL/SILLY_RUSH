@@ -7,7 +7,8 @@ public class Enemy : MonoBehaviour
     public HealthBarBehavior HealthBar;
     public float speed = 10f;
     public int maxHealth = 30;
-    public int health;
+    private int health;
+    
     public int money = 40;
 
     private Transform target;
@@ -16,6 +17,13 @@ public class Enemy : MonoBehaviour
     private bool xdir = Waypoints.XDirStart;
     private bool ydir = Waypoints.YDirStart;
     private Vector3 CorrVec;
+
+    public int Health
+    {
+        get {
+            return health;
+        }
+    }
 
     void Start()
     {

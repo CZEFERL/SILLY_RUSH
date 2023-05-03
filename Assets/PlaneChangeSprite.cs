@@ -16,7 +16,7 @@ public class PlaneChangeSprite : MonoBehaviour
 
     private void Update()
     {
-        if (plane.health < plane.maxHealth * 0.4f)
+        if (plane.Health < plane.maxHealth * 0.4f)
         {
             spriteRenderer.sprite = damagedPlane;
             enabled = false;

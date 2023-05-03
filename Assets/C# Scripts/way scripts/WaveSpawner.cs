@@ -12,8 +12,10 @@ public class WaveSpawner : MonoBehaviour
     public static int SpawnsCount;
 
     public float timeBetweenWaves = 7f;
+    public float timeIncrease;
     private float countdown;
     private float addedTimeBetweenWaves;
+    
 
     private static int StartIndex = 0;
     private int waveIndex;
@@ -54,7 +56,7 @@ public class WaveSpawner : MonoBehaviour
         {
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves + addedTimeBetweenWaves;
-            addedTimeBetweenWaves += 3f;
+            addedTimeBetweenWaves += timeIncrease;
             return;
         }
 
