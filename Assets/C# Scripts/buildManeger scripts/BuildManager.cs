@@ -23,6 +23,9 @@ public class BuildManager : MonoBehaviour
         if (FunctionPanel.activeInHierarchy)
             return;
 
+        if (Time.timeScale == 0)
+            return;
+
         shopPanel.SetActive(true);
         ShopController.place = gameObject;
     }

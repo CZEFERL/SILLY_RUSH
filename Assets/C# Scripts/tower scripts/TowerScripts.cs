@@ -161,6 +161,8 @@ public class TowerScripts : MonoBehaviour
         if (shopPanel.activeInHierarchy)
             return;
 
+        if (Time.timeScale == 0)
+            return;
 
         FunctionPanel.SetActive(true);
         FunctionController.pole = gameObject;
