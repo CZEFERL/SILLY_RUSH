@@ -48,7 +48,7 @@ public class SplashProjectileScript : MonoBehaviour
             Vector2 dir = targetpos - transform.position;
             float dist = Mathf.Abs(targetpos.x - xStart);
             var x = Mathf.Abs(transform.position.x - xStart) / dist;
-            dir.y += curve.Evaluate(x) * 2;
+            dir.y += curve.Evaluate(x);
             transform.Translate(dir.normalized * Time.deltaTime * speed * speedCurve.Evaluate(x), Space.World);
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 45));
