@@ -12,6 +12,7 @@ public class TowerScripts : MonoBehaviour
     public float projSpeed;
     public int damage;
     public float range;
+    public float minRange = 0;
     public float CD;
     private float currentCD;
     
@@ -59,7 +60,7 @@ public class TowerScripts : MonoBehaviour
         {
             float currDist = Vector2.Distance(transform.position, enemy.transform.position);
 
-            if (currDist < NearestEnemyDistance && currDist <= range)
+            if (currDist < NearestEnemyDistance && currDist >= minRange && currDist <= range && !(TryGetComponent<MortarScript>(out MortarScript x) && enemy.TryGetComponent<PlaneChangeSprite>(out PlaneChangeSprite y)))
             {
                 NearestEnemy = enemy.transform;
                 NearestEnemyDistance = currDist;
@@ -80,11 +81,14 @@ public class TowerScripts : MonoBehaviour
         if (isRotatable)
             Rotate(dir);
 
+        if (TryGetComponent<MortarScript>(out MortarScript mortar))
+            mortar.Rotate(enemy);
+
         GameObject proj = Instantiate(Projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
         if (splashRange == 0)
             proj.GetComponent<TowerProjectileScript>().SetTarget(enemy, damage, projSpeed);
         else
-            proj.GetComponent<SplashProjectileScript>().SetTarget(enemy.position, damage, projSpeed, splashRange);
+            proj.GetComponent<SplashProjectileScript>().SetTarget(enemy, damage, projSpeed, splashRange);
     }
 
     void Rotate(Vector3 dir)

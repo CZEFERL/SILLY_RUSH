@@ -208,7 +208,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 1.2777778, y: 1.0833334, z: 0}
+  m_ChunkCullingBounds: {x: 1.2777778, y: 1.6388888, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -488,7 +488,7 @@ Tilemap:
   - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: 854349111dd34ca4290363b403e8d773, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -438774231, guid: 212308b415a46c148a825f26c3734cfe, type: 3}
+    m_Data: {fileID: 1058222855, guid: 212308b415a46c148a825f26c3734cfe, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 32055027, guid: 212308b415a46c148a825f26c3734cfe, type: 3}
   - m_RefCount: 1
@@ -6369,6 +6369,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4077337703172455830, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
   m_PrefabInstance: {fileID: 4077337702691561664}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1692032343 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4077337703172455826, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+  m_PrefabInstance: {fileID: 4077337702691561664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692032337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ec2fe74b075cd4abd69881dba4023a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1701474615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6873,6 +6884,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437301528}
     m_Modifications:
+    - target: {fileID: 552455167411027238, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 552455167411027238, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 552455167411027238, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 552455167411027238, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1692032343}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setBuild
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShopController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 7477972453877967450, guid: 1fcb3e60aeca2e045aae5ddbb96622ac, type: 3}
+    - target: {fileID: 2199182889215261240, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4077337703172455825, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
       propertyPath: m_Name
       value: Shop
@@ -6960,6 +7019,38 @@ PrefabInstance:
     - target: {fileID: 4077337703172455830, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553228551990601403, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf5d865e054ef76419cec154f40fd944, type: 3}
+    - target: {fileID: 6331350112406519278, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_text
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665570855392937027, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_text
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150795666572071835, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_text
+      value: "\u041C\u043E\u0440\u0442\u0438\u0440\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125285140706698635, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125285140706698635, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125285140706698635, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125285140706698635, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9fa1f0ed5c1924092d493d9f0075ee, type: 3}

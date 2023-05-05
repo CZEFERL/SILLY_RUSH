@@ -12,6 +12,5 @@ public class FunctionController : MonoBehaviour
         PlayerStats.Money += (pole.GetComponent<TowerScripts>().money) / 2;
         Instantiate(empty, pole.transform.position, pole.transform.rotation);
         gameObject.SetActive(false);
-
     }
 }
