@@ -81,12 +81,14 @@ public class TowerScripts : MonoBehaviour
         Vector3 dir = enemy.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        if (isRotatable)
-            Rotate(dir);
+        
 
         if (TryGetComponent<MortarScript>(out MortarScript mortar))
             mortar.Rotate(enemy);
-        
+
+        if (isRotatable)
+            Rotate(dir);
+
         GameObject proj = Instantiate(Projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
         if (splashRange == 0)
             proj.GetComponent<TowerProjectileScript>().SetTarget(enemy, damage, projSpeed);
@@ -117,6 +119,7 @@ public class TowerScripts : MonoBehaviour
                 break;
             default:
                 transform.eulerAngles = new Vector3(0, 0, 0);
+                x += 90;
                 break;
         }
         switch (x)
@@ -150,7 +153,7 @@ public class TowerScripts : MonoBehaviour
 
     float SignedAngleToTarget(Vector3 dir)
     {
-        float angle = Vector3.Angle(dir, new Vector3(1, 0, 0));
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         float sign = Mathf.Sign(Vector3.Dot(new Vector3(0, 0, 1), Vector3.Cross(dir, new Vector3(1, 0, 0))));
 
         return angle * sign;
