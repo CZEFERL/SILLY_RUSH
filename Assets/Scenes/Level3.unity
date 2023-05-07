@@ -6000,7 +6000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414e6000249eeac45895ae4c2744acc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 450
+  startMoney: 700
   startLives: 20
 --- !u!114 &1513423834
 MonoBehaviour:
@@ -6016,16 +6016,119 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - SubWaves:
-    - enemy: {fileID: 279119661796408142, guid: 4a04536ff30e25c4fb01316398451b08, type: 3}
+    - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
       LineInd: 1
       SpawnInd: 2
-      count: 1
+      count: 3
       time: 1
     - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
       LineInd: 0
       SpawnInd: 1
+      count: 2
+      time: 1
+    - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 3
+      time: 1
+    - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 4
+      time: 1
+    time: 0
+  - SubWaves:
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      LineInd: 1
+      SpawnInd: 2
       count: 1
       time: 1
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 1
+      time: 1
+    time: 0
+  - SubWaves:
+    - enemy: {fileID: 1777544729743001094, guid: aa64d49d85289cb439d922e01de4e12f, type: 3}
+      LineInd: 1
+      SpawnInd: 2
+      count: 2
+      time: 3
+    - enemy: {fileID: 4576254856459248776, guid: a212e9d079181f9438c63f31630170c1, type: 3}
+      LineInd: 0
+      SpawnInd: 2
+      count: 4
+      time: 0.5
+    - enemy: {fileID: 4576254856459248776, guid: a212e9d079181f9438c63f31630170c1, type: 3}
+      LineInd: 1
+      SpawnInd: 2
+      count: 5
+      time: 0.5
+    time: 5
+  - SubWaves:
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      LineInd: 1
+      SpawnInd: 2
+      count: 2
+      time: 1
+    - enemy: {fileID: 4576254856459248776, guid: a212e9d079181f9438c63f31630170c1, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 5
+      time: 1
+    - enemy: {fileID: 1777544729743001094, guid: aa64d49d85289cb439d922e01de4e12f, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 2
+      time: 1
+    - enemy: {fileID: 1777544729743001094, guid: aa64d49d85289cb439d922e01de4e12f, type: 3}
+      LineInd: 1
+      SpawnInd: 1
+      count: 3
+      time: 3
+    time: 2
+  - SubWaves:
+    - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
+      LineInd: 1
+      SpawnInd: 2
+      count: 15
+      time: 0.5
+    - enemy: {fileID: 2461044008081743919, guid: 690dde50bb6046c46b23e5dcf82c062d, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 15
+      time: 0.5
+    - enemy: {fileID: 1777544729743001094, guid: aa64d49d85289cb439d922e01de4e12f, type: 3}
+      LineInd: 1
+      SpawnInd: 1
+      count: 3
+      time: 3
+    - enemy: {fileID: 1777544729743001094, guid: aa64d49d85289cb439d922e01de4e12f, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 5
+      time: 3
+    - enemy: {fileID: 4576254856459248776, guid: a212e9d079181f9438c63f31630170c1, type: 3}
+      LineInd: 1
+      SpawnInd: 1
+      count: 15
+      time: 1
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 5
+      time: 1
+    - enemy: {fileID: 4320336697399757452, guid: 3d5fe6d531589b546a19a9c1ca5e860b, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 8
+      time: 1
+    - enemy: {fileID: 1777544729743001094, guid: aa64d49d85289cb439d922e01de4e12f, type: 3}
+      LineInd: 0
+      SpawnInd: 1
+      count: 8
+      time: 2
     time: 0
   LinesObject: {fileID: 5231260726690024690}
   SpawnPoints:

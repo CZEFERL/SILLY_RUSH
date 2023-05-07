@@ -108,9 +108,9 @@ MonoBehaviour:
   splashRange: 2
   projSpeed: 13
   damage: 30
-  range: 5
+  range: 4
   minRange: 1.5
-  CD: 4.5
+  CD: 3
   spriteArray: []
   Projectile: {fileID: 6441853576523837475, guid: a0777b987dcb36140a86738d025372ec, type: 3}
 --- !u!61 &-9198719698882933559

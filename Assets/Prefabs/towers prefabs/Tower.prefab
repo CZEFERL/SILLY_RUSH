@@ -106,10 +106,10 @@ MonoBehaviour:
   money: 250
   splashRange: 0
   projSpeed: 25
-  damage: 15
-  range: 4
+  damage: 28
+  range: 4.5
   minRange: 0
-  CD: 1.6
+  CD: 1
   spriteArray:
   - {fileID: 233274068, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}
   - {fileID: 1011208634, guid: 6717408aaa8fe8b4384534e77d6e405c, type: 3}

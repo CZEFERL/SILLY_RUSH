@@ -101,9 +101,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 2042075920627418794}
-  speed: 3
-  maxHealth: 30
-  money: 40
+  speed: 2
+  maxHealth: 20
+  money: 10
 --- !u!95 &-5572921287083603112
 Animator:
   serializedVersion: 4

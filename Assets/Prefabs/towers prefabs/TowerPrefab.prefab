@@ -105,9 +105,9 @@ MonoBehaviour:
   isRotatable: 0
   money: 200
   splashRange: 0
-  projSpeed: 30
-  damage: 10
-  range: 2
+  projSpeed: 20
+  damage: 15
+  range: 2.5
   minRange: 0
   CD: 0.8
   spriteArray: []
