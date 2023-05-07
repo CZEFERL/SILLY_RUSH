@@ -18,7 +18,7 @@ public class StartScript : MonoBehaviour
             Time.timeScale = 1f;
         }
         Destroy(Button.gameObject);
-
+        AudioListener.pause = false;
     }
 
 }

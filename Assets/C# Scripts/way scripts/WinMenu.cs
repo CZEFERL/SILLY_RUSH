@@ -21,13 +21,16 @@ public class WinMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 0f;
+        AudioListener.pause = false;
     }
 
 
     public void NextLevel()
     {
         Time.timeScale = 1f;
+        AudioListener.pause = false;
         SceneManager.LoadScene("Level" + (int.Parse(SceneManager.GetActiveScene().name.ToCharArray()[^1].ToString()) + 1).ToString());
+        AudioListener.pause = false;
     }
 
 
@@ -35,6 +38,7 @@ public class WinMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        AudioListener.pause = false;
     }
 
 }

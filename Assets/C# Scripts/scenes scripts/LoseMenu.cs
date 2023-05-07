@@ -20,6 +20,7 @@ public class LoseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 0f;
+        AudioListener.pause = false;
     }
 
 
@@ -27,6 +28,7 @@ public class LoseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        AudioListener.pause = false;
     }
 
 

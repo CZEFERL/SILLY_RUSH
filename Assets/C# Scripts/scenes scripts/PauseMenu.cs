@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         AudioListener.pause = false;
         Time.timeScale = 0f;
     }
