@@ -164,7 +164,7 @@ public class TowerScripts : MonoBehaviour
         if (shopPanel.activeInHierarchy)
             return;
 
-        if (Time.timeScale == 0)
+        if (Time.timeScale == 0 && GameObject.Find("StartScene").GetComponent<StartScript>().StartFlag)
             return;
 
         buttonSound.Play();

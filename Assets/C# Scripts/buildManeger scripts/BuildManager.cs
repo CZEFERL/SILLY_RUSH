@@ -23,7 +23,7 @@ public class BuildManager : MonoBehaviour
         if (FunctionPanel.activeInHierarchy)
             return;
 
-        if (Time.timeScale == 0)
+        if (Time.timeScale == 0 && GameObject.Find("StartScene").GetComponent<StartScript>().StartFlag)
             return;
 
         GetComponent<AudioSource>().Play();

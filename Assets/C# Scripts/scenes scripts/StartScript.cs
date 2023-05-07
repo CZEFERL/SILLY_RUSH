@@ -13,7 +13,10 @@ public class StartScript : MonoBehaviour
     public void StartScene()
     {
         if (Time.timeScale == 0f)
+        {
+            StartFlag = true;
             Time.timeScale = 1f;
+        }
         Destroy(Button.gameObject);
 
     }
