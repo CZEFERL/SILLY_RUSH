@@ -19,7 +19,7 @@ public class WinMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 0f;
     }
 
@@ -27,7 +27,7 @@ public class WinMenu : MonoBehaviour
     public void NextLevel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level" + (int.Parse(SceneManager.GetActiveScene().name.ToCharArray()[^1].ToString()) + 1).ToString());
     }
 
 

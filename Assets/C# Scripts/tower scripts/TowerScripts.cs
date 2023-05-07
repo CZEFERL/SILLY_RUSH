@@ -98,28 +98,32 @@ public class TowerScripts : MonoBehaviour
 
     void Rotate(Vector3 dir)
     {
-        var x = SignedAngleToTarget(dir);
+        var x = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         switch (x)
         {
             case > 135:
                 transform.eulerAngles = new Vector3(0, 0, -180);
-                x -= 135;
+                x = 225 - x;
                 break;
             case > 45:
-                transform.eulerAngles = new Vector3(0, 0, -90);
-                x -= 45;
+                transform.eulerAngles = new Vector3(0, 0, 90);
+                x = 135 - x;
                 break;
             case < -135:
                 transform.eulerAngles = new Vector3(0, 0, 180);
-                x += 225;
+                x += Mathf.Abs(x + 135);
                 break;
             case < -45:
-                transform.eulerAngles = new Vector3(0, 0, 90);
-                x += 135;
+                transform.eulerAngles = new Vector3(0, 0, -90);
+                x = Mathf.Abs(x + 45);
+                break;
+            case < 0:
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                x = x + 90;
                 break;
             default:
                 transform.eulerAngles = new Vector3(0, 0, 0);
-                x += 90;
+                x = 45 - x;
                 break;
         }
         switch (x)
@@ -149,14 +153,6 @@ public class TowerScripts : MonoBehaviour
         index -= 5;
         yield return new WaitForSeconds(0.3f);
         spriteRenderer.sprite = spriteArray[index];
-    }
-
-    float SignedAngleToTarget(Vector3 dir)
-    {
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        float sign = Mathf.Sign(Vector3.Dot(new Vector3(0, 0, 1), Vector3.Cross(dir, new Vector3(1, 0, 0))));
-
-        return angle * sign;
     }
 
     void OnMouseDown()
