@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public HealthBarBehavior HealthBar;
     public float speed = 10f;
     public int maxHealth = 30;
+    public WayPoints wayPoints { get; set; }
     private int health;
     
     public int money = 40;
@@ -14,8 +15,8 @@ public class Enemy : MonoBehaviour
     private Transform target;
     private int wavepointIndex = 1;
 
-    private bool xdir = Waypoints.XDirStart;
-    private bool ydir = Waypoints.YDirStart;
+    private bool xdir;
+    private bool ydir;
     private Vector3 CorrVec;
 
     public int Health
@@ -27,13 +28,15 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        CorrVec = transform.position - Waypoints.points[0].position;
-        target = Waypoints.points[wavepointIndex];
+        xdir = wayPoints.XDirStart;
+        ydir = wayPoints.YDirStart;
+        CorrVec = transform.position - wayPoints.points[0].position;
+        target = wayPoints.points[wavepointIndex];
 
-        if (Waypoints.points[1].position.x - Waypoints.points[0].position.x == 0)
-            transform.position = new Vector3(transform.position.x, Waypoints.points[0].position.y);
-        if (Waypoints.points[1].position.y - Waypoints.points[0].position.y == 0)
-            transform.position = new Vector3(Waypoints.points[0].position.x, transform.position.y);
+        if (wayPoints.points[1].position.x - wayPoints.points[0].position.x == 0)
+            transform.position = new Vector3(transform.position.x, wayPoints.points[0].position.y);
+        if (wayPoints.points[1].position.y - wayPoints.points[0].position.y == 0)
+            transform.position = new Vector3(wayPoints.points[0].position.x, transform.position.y);
 
         health = maxHealth;
         HealthBar.SetHealth(health, maxHealth);
@@ -56,7 +59,7 @@ public class Enemy : MonoBehaviour
 
     void GetNextWaypoint()
     {
-        if (wavepointIndex >= Waypoints.points.Length - 1)
+        if (wavepointIndex >= wayPoints.points.Length - 1)
         {
             endpath();
         }
@@ -64,18 +67,18 @@ public class Enemy : MonoBehaviour
         {
             wavepointIndex++;
 
-            target = Waypoints.points[wavepointIndex];
+            target = wayPoints.points[wavepointIndex];
 
-            if (wavepointIndex < Waypoints.points.Length - 2)
+            if (wavepointIndex < wayPoints.points.Length - 2)
                 GetNextCorVec();
         }
     }
 
     void GetNextCorVec()
     {
-        if (Waypoints.points[wavepointIndex + 1].position.x - target.position.x != 0)
+        if (wayPoints.points[wavepointIndex + 1].position.x - target.position.x != 0)
         {
-            if (((Waypoints.points[wavepointIndex + 1].position.x > target.position.x)) != xdir)
+            if (((wayPoints.points[wavepointIndex + 1].position.x > target.position.x)) != xdir)
             {
                 xdir = !xdir;
                 CorrVec.y = -CorrVec.y;
@@ -83,7 +86,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if (((Waypoints.points[wavepointIndex + 1].position.y > target.position.y)) != ydir)
+            if (((wayPoints.points[wavepointIndex + 1].position.y > target.position.y)) != ydir)
             {
                 ydir = !ydir;
                 CorrVec.x = -CorrVec.x;

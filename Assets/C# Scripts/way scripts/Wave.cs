@@ -21,6 +21,7 @@ public class Wave
 public class SubWave
 {
     public GameObject enemy;
+    public int LineInd;
     public int SpawnInd;
     public int count;
     public float time;
