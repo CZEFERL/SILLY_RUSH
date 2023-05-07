@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class WinMenu : MonoBehaviour
 {
-
+    public PauseMenu pauseMenu;
     public GameObject WinPanel;
-
 
     public void Win()
     {
+        pauseMenu.enabled = false;
         WinPanel.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
     }
 
 

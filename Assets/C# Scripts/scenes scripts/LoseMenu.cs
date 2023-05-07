@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LoseMenu : MonoBehaviour
 {
-
+    public PauseMenu pauseMenu;
     public GameObject LosePanel;
 
     public void Lose()
     {
+        pauseMenu.enabled = false;
         LosePanel.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
     }
 
     public void Restart()

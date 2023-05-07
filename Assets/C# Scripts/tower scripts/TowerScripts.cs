@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TowerScripts : MonoBehaviour
 {
+    public AudioSource buttonSound;
+    public AudioSource towerShotSound;
     public bool isRotatable;
     public int money;
 
@@ -73,6 +75,7 @@ public class TowerScripts : MonoBehaviour
 
     void Shoot(Transform enemy)
     {
+        towerShotSound.Play();
         currentCD = CD;
         
         Vector3 dir = enemy.position - transform.position;
@@ -83,7 +86,7 @@ public class TowerScripts : MonoBehaviour
 
         if (TryGetComponent<MortarScript>(out MortarScript mortar))
             mortar.Rotate(enemy);
-
+        
         GameObject proj = Instantiate(Projectile, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
         if (splashRange == 0)
             proj.GetComponent<TowerProjectileScript>().SetTarget(enemy, damage, projSpeed);
@@ -161,9 +164,10 @@ public class TowerScripts : MonoBehaviour
         if (shopPanel.activeInHierarchy)
             return;
 
-        if (Time.timeScale == 0)
+        if (Time.timeScale == 0 && GameObject.Find("StartScene").GetComponent<StartScript>().StartFlag)
             return;
 
+        buttonSound.Play();
         FunctionPanel.SetActive(true);
         FunctionController.pole = gameObject;
     }

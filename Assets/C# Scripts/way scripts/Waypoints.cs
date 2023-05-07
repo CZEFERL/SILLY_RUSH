@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class Waypoints : MonoBehaviour
+public class WayPoints : MonoBehaviour
 {
-    public static Transform[] points;
-    public static bool XDirStart, YDirStart;
+    public Transform[] points { get; set; }
+    public bool XDirStart { get; set; }
+    public bool YDirStart { get; set; }
     public Transform StartOfPath;
     public Transform EndOfPath;
 
@@ -19,15 +20,15 @@ public class Waypoints : MonoBehaviour
         points[transform.childCount + 1] = EndOfPath;
 
 
-        if (Waypoints.points[1].position.x - Waypoints.points[0].position.x == 0)
+        if (Mathf.Abs(points[1].position.x - points[0].position.x) < 0.5)
         {
-            YDirStart = (Waypoints.points[1].position.y - Waypoints.points[0].position.y) > 0;
-            XDirStart = (Waypoints.points[2].position.x - Waypoints.points[1].position.x) > 0;
+            YDirStart = (points[1].position.y - points[0].position.y) > 0;
+            XDirStart = (points[2].position.x - points[1].position.x) > 0;
         }
         else
         {
-            XDirStart = (Waypoints.points[1].position.x - Waypoints.points[0].position.x) > 0;
-            YDirStart = (Waypoints.points[2].position.y - Waypoints.points[1].position.y) > 0;
+            XDirStart = (points[1].position.x - points[0].position.x) > 0;
+            YDirStart = (points[2].position.y - points[1].position.y) > 0;
         }
     }
 }
