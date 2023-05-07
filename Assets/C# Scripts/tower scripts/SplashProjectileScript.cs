@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SplashProjectileScript : MonoBehaviour
 {
+    public GameObject explosion;    
     private Vector3 targetpos;
     private float splashRange;
     private float speed;
@@ -32,6 +33,7 @@ public class SplashProjectileScript : MonoBehaviour
 
         if (Vector2.Distance(transform.position, targetpos) < 0.2f)
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
             foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
             {
                 float currDist = Vector2.Distance(transform.position, enemy.transform.position);

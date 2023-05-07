@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8c97eefe4682c4095fd329bba8355c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 1766216458887313742, guid: 1e6b9a9d6cc66304f9481404f411cea2, type: 3}
   curve:
     serializedVersion: 2
     m_Curve:
