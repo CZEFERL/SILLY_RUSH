@@ -26,6 +26,7 @@ public class BuildManager : MonoBehaviour
         if (Time.timeScale == 0)
             return;
 
+        GetComponent<AudioSource>().Play();
         shopPanel.SetActive(true);
         ShopController.place = gameObject;
     }

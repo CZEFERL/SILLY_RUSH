@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TowerScripts : MonoBehaviour
 {
+    public AudioSource buttonSound;
     public AudioSource towerShotSound;
     public bool isRotatable;
     public int money;
@@ -166,6 +167,7 @@ public class TowerScripts : MonoBehaviour
         if (Time.timeScale == 0)
             return;
 
+        buttonSound.Play();
         FunctionPanel.SetActive(true);
         FunctionController.pole = gameObject;
     }

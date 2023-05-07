@@ -22,9 +22,15 @@ public class PauseMenu : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (GameIsPaused)
+                {
+                    AudioListener.pause = false;
                     Resume();
+                }
                 else
+                {
+                    AudioListener.pause = true;
                     Pause();
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ public class LoseMenu : MonoBehaviour
     {
         LosePanel.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
     }
 
     public void Restart()

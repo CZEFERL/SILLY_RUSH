@@ -9,7 +9,7 @@ public class ExplosionScript : MonoBehaviour
         AudioSource.PlayClipAtPoint(explosionSound.clip, new Vector3(0, 0, 0));
     }
 
-    void Update()
+    void AnimationEnd()
     {
         Destroy(gameObject);
     }

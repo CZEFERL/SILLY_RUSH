@@ -13,6 +13,7 @@ public class WinMenu : MonoBehaviour
     {
         WinPanel.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
     }
 
 
