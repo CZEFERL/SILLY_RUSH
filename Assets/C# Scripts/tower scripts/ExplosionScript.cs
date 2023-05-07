@@ -2,7 +2,14 @@ using UnityEngine;
 
 public class ExplosionScript : MonoBehaviour
 {
-    void AnimationEnd()
+    public AudioSource explosionSound;
+
+    private void Start()
+    {
+        AudioSource.PlayClipAtPoint(explosionSound.clip, new Vector3(0, 0, 0));
+    }
+
+    void Update()
     {
         Destroy(gameObject);
     }
