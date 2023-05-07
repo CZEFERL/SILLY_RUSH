@@ -103,7 +103,7 @@ MonoBehaviour:
   buttonSound: {fileID: 6911057126867328107}
   towerShotSound: {fileID: -8201671090869753015}
   isRotatable: 1
-  money: 250
+  money: 300
   splashRange: 0
   projSpeed: 10
   damage: 40

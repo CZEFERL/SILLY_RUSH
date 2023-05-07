@@ -16409,7 +16409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a9d5f4ab43e494cae42af3e157b204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 517348228}
   LosePanel: {fileID: 7674125457343657806}
 --- !u!222 &7674125457343657803
 CanvasRenderer:
@@ -17092,7 +17092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ecd5a43fb4d64fd2a3b688e71a8eb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 517348228}
   WinPanel: {fileID: 7950702383991006326}
 --- !u!1 &7950702383991006326
 GameObject:
